@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ABIOUT Electrical Contractors provides dependable electrical, networking, security, and maintenance services." />
+    <title>ABIOUT Electrical Contractors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+    
+    <script type="module" src="./header.js"></script>
+    <script type="module" src="./hero.js"></script>
+    <script type="module" src="./services.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".hc__tabs [role='tab']");
+        const slides = document.querySelectorAll(".hc__slide");
+      
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((item, i) => {
+              const active = i === index;
+              item.setAttribute("aria-selected", String(active));
+              item.tabIndex = active ? 0 : -1;
+            });
+      
+            slides.forEach((slide, i) => {
+              slide.classList.toggle("is-active", i === index);
+            });
+          });
+        });
+      });
+    </script>
+
+    <header class="site-header" data-state="top" style="background-color: #071827;">
+      <div class="header-inner">
+    <a class="brand" href="#top" aria-label="ABIOUT Electrical Contractors home" style="background-color: #071827;">
+      <!-- <span class="logo-crop"><img src="./public/logo.png" /></span>
+      <span class="brand-name">ABIOUT <small>Electrical Contractors</small></span> -->
+      <img src="./public/logo-t.jpeg" style="border-radius: 40px;" alt="Power Solutions Icon" class="brand-logo__icon">
+      <div class="brand-logo__text">
+        <span class="brand-logo__title">POWER</span>
+        <span class="brand-logo__subtitle">SOLUTIONS</span>
+      </div>
+        <!-- <span style="font-size: 12px;" class="brand-logo__title">POWER</span>
+        <span style="font-size: 10px;" class="brand-logo__subtitle">SOLUTIONS</span> -->
+
+    </a>
+
+    <nav aria-label="Main navigation" style="background-color: #071827;">
+      <a href="#services">Services</a>
+      <a href="#about">About us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="header-phone" href="" aria-label="Call us on +91 98765 43210" style="background: transparent; border: #071827;">
+      <!-- <span class="header-phone__icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      </span>
+      <span class="header-phone__text">Call us <span>+91 98765 43210</span></span> -->
+    </a>
+
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><i></i><i></i></button>
+  </div>
+  <div class="site-header__progress" aria-hidden="true"></div>
+</header>
+
+<div class="mnav" id="mobile-menu" inert>
+  <nav aria-label="Mobile navigation">
+    <a href="#services" style="--i:0">Services</a>
+    <a href="#about" style="--i:1">About us</a>
+    <a href="#contact" style="--i:2">Contact</a>
+  </nav>
+  <div class="mnav__foot" style="--i:3">
+    <a href="tel:+919876543210">+91 98765 43210</a>
+    <a href="mailto:hello@abioutelectrical.com">hello@abioutelectrical.com</a>
+  </div>
+</div>
+
+    </header>
+
+    <main id="top">
+      <section class="hero">
+  <div class="hero__bg" aria-hidden="true" style="background-image: url(./public/banner-bg-1.jpeg);"></div>
+  
+  <!-- <div class="circuit-lines" aria-hidden="true"></div> -->
+  <!-- <svg class="hero__trace" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <path pathLength="1" d="M0 340 H260 L310 290 H620 L670 340 H1200" />
+  </svg> -->
+  <div class="hero-inner">
+
+  <div class="hero-copy">
+
+    <h1>
+      <!-- <img src="./public/logo.png" alt="Power Solutions Icon" class="brand-logo__icon"> -->
+      <span class="line"><span>Powering your</span></span>
+      <span class="line"><strong>world with confidence.</strong></span>
+    </h1>
+    <p class="">Electrical contractors &amp; engineers</p>
+    <p class="hero-text">Reliable electrical solutions for homes, businesses, and building projects. From wiring to complete systems, we deliver safe, efficient work that lasts.</p>
+    <div class="hero-actions">
+      <a class="button button-gold" href="#contact">Get a free consultation <span>→</span></a>
+      <a class="text-link" href="#services">Explore our services <span>↓</span></a>
+    </div>
+    <div class="hero-points"><span>✓ Quality workmanship</span><span>✓ Safe &amp; compliant</span><span>✓ On-time delivery</span></div>
+  </div>
+
+  <!-- The card is now a real project switcher: Residential / Commercial / Industrial -->
+  <div class="hero-card hc">
+    <div class="hc__slides">
+      <figure class="hc__slide is-active" id="hc-com" role="tabpanel" aria-labelledby="hc-tab-com" style="--img:url('./public/industrial.jpeg')">
+        <div class="hc__img"></div>
+        <figcaption><strong>Offices and buildings, fully powered.</strong><span>Complete electrical, CCTV and communication systems.</span></figcaption>
+      </figure>
+      <figure class="hc__slide" id="hc-ind" role="tabpanel" aria-labelledby="hc-tab-ind" style="--img:url('./public/residential.jpeg')">
+        <div class="hc__img"></div>
+        <figcaption><strong>Panels and backup power that don’t quit.</strong><span>HT/LT panels and DG set maintenance for heavy loads.</span></figcaption>
+      </figure>
+      <figure class="hc__slide" id="hc-res" role="tabpanel" aria-labelledby="hc-tab-res" style="--img:url('./public/hero-img.jpeg')">
+        <div class="hc__img"></div>
+        <figcaption><strong>Complex power systems. Commercial expertise</strong><span>End-to-end building project, custom industrial controls, data center infrastructure, and energy-efficient lighting.</span></figcaption>
+      </figure>
+    </div>
+    <span class="bolt hc__bolt" aria-hidden="true">ϟ</span>
+    <div class="hc__tabs" role="tablist" aria-label="Project types">
+      <button role="tab" id="hc-tab-ind" aria-controls="hc-ind" aria-selected="true" tabindex="-1"><i></i>Industrial</button>
+      <button role="tab" id="hc-tab-res" aria-controls="hc-res" aria-selected="false"><i></i>Residential</button>
+      <button role="tab" id="hc-tab-com" aria-controls="hc-com" aria-selected="false" tabindex="-1"><i></i>Commercial</button>
+    </div>
+  </div>
+</div>
+</section>
+      <!-- Replace your entire <section class="services section" id="services"> with this -->
+<section class="services section" id="services">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">What we do</p>
+      <h2>Full-service electrical expertise.</h2>
+    </div>
+    <p>One trusted partner for installation, upgrades, maintenance, and technical support across every stage of your project.</p>
+  </div>
+
+  <div class="svc-grid">
+    <a class="svc" href="#contact" style="--span:7;" aria-label="HT / LT Panels: enquire">
+
+  <img
+    class="svc__bg"
+    src="./public/ht-lt-panels.jpg"
+    alt="HT / LT Panels"
+  />
+
+  <span class="svc__tag">Power distribution</span>
+    <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+
+  </span>
+
+  <div class="svc__body">
+    <h3>HT / LT Panels</h3>
+    <div class="svc__reveal">
+      <p>Installation and maintenance of high-tension and low-tension distribution panels, built for load and tested before handover.</p>
+    </div>
+    <ul class="svc__chips">
+      <li>HT panels</li>
+      <li>LT panels</li>
+      <li>Maintenance</li>
+    </ul>
+  </div>
+</a>
+
+    <a class="svc" href="#contact" style="--span:5; --img:url('./public/building-wire2.jpg')" aria-label="Building Wiring: enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Electrical</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>Building Wiring</h3>
+        <div class="svc__reveal"><p>Complete wiring for homes and commercial buildings, neatly routed, labelled and code-compliant.</p></div>
+        <ul class="svc__chips"><li>Residential</li><li>Commercial</li></ul>
+      </div>
+    </a>
+    <a class="svc" href="#contact" style="--span:4; --img:url('./public/earthing-grounding.jpg')" aria-label="Earthing & Grounding: enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Safety</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>Earthing & Grounding</h3>
+        <div class="svc__reveal"><p>Proper earthing systems that protect people and equipment from faults and surges.</p></div>
+        <ul class="svc__chips"><li>Earth pits</li><li>Testing</li></ul>
+      </div>
+    </a>
+    <a class="svc" href="#contact" style="--span:4; --img:url('./public/stabilizer.jpg')" aria-label="Stabilizers: enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Power quality</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>Stabilizers</h3>
+        <div class="svc__reveal"><p>Voltage stabilizers and fixes for unstable supply, so sensitive equipment runs consistently.</p></div>
+        <ul class="svc__chips"><li>Voltage control</li></ul>
+      </div>
+    </a>
+    <a class="svc" href="#contact" style="--span:4; --img:url('./public/air-conditioning.jpg')" aria-label="Air Conditioning: enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Climate control</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>Air Conditioning</h3>
+        <div class="svc__reveal"><p>AC installation, servicing and repair for comfortable, efficient spaces.</p></div>
+        <ul class="svc__chips"><li>Install</li><li>Service</li><li>Repair</li></ul>
+      </div>
+    </a>
+    <a class="svc" href="#contact" style="--span:5; --img:url('./public/generators.jpg')" aria-label="Generators (DG Set): enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Backup power</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>Generators (DG Set)</h3>
+        <div class="svc__reveal"><p>Maintenance, repair and servicing of diesel generator sets, so backup power is ready when the grid fails.</p></div>
+        <ul class="svc__chips"><li>Servicing</li><li>Repair</li></ul>
+      </div>
+    </a>
+    <a class="svc" href="#contact" style="--span:7; --img:url('./public/cctv.jpg')" aria-label="CCTV Camera Setup: enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Security</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>CCTV Camera Setup</h3>
+        <div class="svc__reveal"><p>Professional CCTV installation with planned camera placement, cabling and complete system setup.</p></div>
+        <ul class="svc__chips"><li>Cameras</li><li>Recording</li><li>Remote view</li></ul>
+      </div>
+    </a>
+    <a class="svc" href="#contact" style="--span:6; --img:url('./public/intercom-pbx.jpg')" aria-label="Intercom & PBX: enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Communication</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>Intercom & PBX</h3>
+        <div class="svc__reveal"><p>Design, installation and support for intercom and PBX systems across offices and buildings.</p></div>
+        <ul class="svc__chips"><li>Design</li><li>Install</li><li>Support</li></ul>
+      </div>
+    </a>
+    <a class="svc" href="#contact" style="--span:6; --img:url('./public/general-upkeep.jpg')" aria-label="General Upkeep: enquire">
+      <div class="svc__bg"></div>
+      <span class="svc__tag">Maintenance</span>
+      <span class="svc__go"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      <div class="svc__body">
+        <h3>General Upkeep</h3>
+        <div class="svc__reveal"><p>Inspections, repairs and preventive maintenance that keep your facility running and prevent costly breakdowns.</p></div>
+        <ul class="svc__chips"><li>Inspections</li><li>Preventive care</li></ul>
+      </div>
+    </a>
+  </div>
+</section>
+
+      <section class="about section" id="about"><div class="about-inner"><div><p class="eyebrow">Why ABIOUT</p><h2>Built on safety.<br /><strong>Trusted for results.</strong></h2></div><div class="about-copy"><p>We bring practical experience, precise standards, and clear communication to every job. Whether it is a home rewiring, a commercial fit-out, or a complete building project, our team keeps your power dependable from start to finish.</p><div class="stats"><div><strong>01</strong><span>Clear scope</span></div><div><strong>02</strong><span>Careful execution</span></div><div><strong>03</strong><span>Reliable support</span></div></div></div></div></section>
+
+      <section class="contact" id="contact"><div><p class="eyebrow">Let’s get to work</p><h2>Have a project in mind?</h2><p>Talk to our team about your electrical, security, networking, or maintenance needs.</p></div><div class="contact-actions"><a class="button button-dark" href="tel:+919876543210">Call us today <span>→</span></a><a class="button button-outline" href="mailto:hello@abioutelectrical.com">Email our team <span>→</span></a></div></section>
+    </main>
+    <footer><span>© 2026 ABIOUT Electrical Contractors</span><span>Safe systems. Solid work. Better spaces.</span></footer>
+  </body>
+</html>
